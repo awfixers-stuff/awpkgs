@@ -7,9 +7,13 @@
 
   outputs = { self, nixpkgs }: {
 
-    packages.x86_64-linux.hello = nixpkgs.legacyPackages.x86_64-linux.hello;
-
-    packages.x86_64-linux.default = self.packages.x86_64-linux.hello;
+    packages.x86_64-linux = let
+      pkgs = nixpkgs.legacyPackages.x86_64-linux;
+    in {
+      hello = pkgs.hello;
+      cursor = pkgs.callPackage ./cursor {};
+      default = self.packages.x86_64-linux.cursor;
+    };
 
   };
 }
