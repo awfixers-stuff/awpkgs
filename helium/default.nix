@@ -1,11 +1,42 @@
-{ lib, stdenv, fetchurl, autoPatchelfHook, makeWrapper
-, alsa-lib, at-spi2-atk, at-spi2-core, atk, cairo, cups, dbus
-, expat, fontconfig, freetype, gdk-pixbuf, glib
-, libdrm, libpulseaudio, libxkbcommon
-  , mesa, nspr, nss, pango
-, libX11, libXcomposite, libXcursor, libXdamage, libXext
-, libXfixes, libXi, libXrandr, libXrender, libXScrnSaver
-, libXtst, libxcb, systemd, wayland
+{
+  lib,
+  stdenv,
+  fetchurl,
+  autoPatchelfHook,
+  makeWrapper,
+  alsa-lib,
+  at-spi2-atk,
+  at-spi2-core,
+  atk,
+  cairo,
+  cups,
+  dbus,
+  expat,
+  fontconfig,
+  freetype,
+  gdk-pixbuf,
+  glib,
+  libdrm,
+  libpulseaudio,
+  libxkbcommon,
+  mesa,
+  nspr,
+  nss,
+  pango,
+  libX11,
+  libXcomposite,
+  libXcursor,
+  libXdamage,
+  libXext,
+  libXfixes,
+  libXi,
+  libXrandr,
+  libXrender,
+  libXScrnSaver,
+  libXtst,
+  libxcb,
+  systemd,
+  wayland,
 }:
 
 let
@@ -22,15 +53,45 @@ stdenv.mkDerivation {
 
   sourceRoot = "helium-${version}-x86_64_linux";
 
-  nativeBuildInputs = [ autoPatchelfHook makeWrapper ];
+  nativeBuildInputs = [
+    autoPatchelfHook
+    makeWrapper
+  ];
 
   buildInputs = [
-    alsa-lib at-spi2-atk at-spi2-core atk cairo cups dbus
-    expat fontconfig freetype gdk-pixbuf glib
-    libdrm libpulseaudio libxkbcommon mesa nspr nss pango
-    libX11 libXcomposite libXcursor libXdamage libXext
-    libXfixes libXi libXrandr libXrender libXScrnSaver
-    libXtst libxcb systemd wayland
+    alsa-lib
+    at-spi2-atk
+    at-spi2-core
+    atk
+    cairo
+    cups
+    dbus
+    expat
+    fontconfig
+    freetype
+    gdk-pixbuf
+    glib
+    libdrm
+    libpulseaudio
+    libxkbcommon
+    mesa
+    nspr
+    nss
+    pango
+    libX11
+    libXcomposite
+    libXcursor
+    libXdamage
+    libXext
+    libXfixes
+    libXi
+    libXrandr
+    libXrender
+    libXScrnSaver
+    libXtst
+    libxcb
+    systemd
+    wayland
     stdenv.cc.cc.lib
   ];
 
@@ -73,8 +134,12 @@ stdenv.mkDerivation {
   '';
 
   autoPatchelfIgnoreMissingDeps = [
-    "libQt5Core.so.5" "libQt5Gui.so.5" "libQt5Widgets.so.5"
-    "libQt6Core.so.6" "libQt6Gui.so.6" "libQt6Widgets.so.6"
+    "libQt5Core.so.5"
+    "libQt5Gui.so.5"
+    "libQt5Widgets.so.5"
+    "libQt6Core.so.6"
+    "libQt6Gui.so.6"
+    "libQt6Widgets.so.6"
   ];
 
   meta = {
