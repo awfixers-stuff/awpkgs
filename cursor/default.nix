@@ -1,4 +1,8 @@
-{ code-cursor, appimageTools, fetchurl }:
+{
+  code-cursor,
+  appimageTools,
+  fetchurl,
+}:
 
 code-cursor.overrideAttrs (old: rec {
   version = "3.6.21";

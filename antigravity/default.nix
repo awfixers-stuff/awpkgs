@@ -1,4 +1,6 @@
-{ pkgs ? import <nixpkgs> {} }:
+{
+  pkgs ? import <nixpkgs> { },
+}:
 
 pkgs.stdenv.mkDerivation rec {
   pname = "antigravity";
@@ -9,7 +11,11 @@ pkgs.stdenv.mkDerivation rec {
     hash = "sha256-obK1vw3l9DBMKYl/gappy4xW6KKVcKliuVOH68cr2VE=";
   };
 
-  nativeBuildInputs = with pkgs; [ autoPatchelfHook makeWrapper copyDesktopItems ];
+  nativeBuildInputs = with pkgs; [
+    autoPatchelfHook
+    makeWrapper
+    copyDesktopItems
+  ];
 
   desktopItems = [
     (pkgs.makeDesktopItem {
@@ -18,7 +24,10 @@ pkgs.stdenv.mkDerivation rec {
       icon = "antigravity";
       desktopName = "Antigravity";
       genericName = "Antigravity Desktop App";
-      categories = [ "Network" "Utility" ];
+      categories = [
+        "Network"
+        "Utility"
+      ];
     })
   ];
 
