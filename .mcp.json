@@ -6,7 +6,7 @@
 			"lifecycle": "lazy"
 		},
 		"railway": {
-			"command": "/home/awfixer/.railway/bin/railway",
+			"command": "railway",
 			"args": ["mcp"],
 			"lifecycle": "lazy"
 		}
