@@ -1,9 +1,14 @@
 {
-  "mcpServers": {
-    "nixos": {
-      "command": "uvx",
-      "args": ["mcp-nixos"],
-      "lifecycle": "lazy"
-    }
-  }
+	"mcpServers": {
+		"nixos": {
+			"command": "uvx",
+			"args": ["mcp-nixos"],
+			"lifecycle": "lazy"
+		},
+		"railway": {
+			"command": "/home/awfixer/.railway/bin/railway",
+			"args": ["mcp"],
+			"lifecycle": "lazy"
+		}
+	}
 }
