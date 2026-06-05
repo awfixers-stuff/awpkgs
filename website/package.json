@@ -24,7 +24,7 @@
     "@oxlint/binding-linux-x64-gnu": "1.68.0",
     "@socketsecurity/bun-security-scanner": "1.1.2",
     "@typescript/native-preview": "7.0.0-dev.20260527.2",
-    "@typescript/native-preview-linux-x64": "7.0.0-dev.20260527.2",
+    "@typescript/native-preview-linux-x64": "7.0.0-dev.20260605.1",
     "oxfmt": "0.53.0",
     "oxlint": "1.68.0",
     "prettier": "^3.8.3",
