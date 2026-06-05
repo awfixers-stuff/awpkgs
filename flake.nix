@@ -27,21 +27,21 @@
     {
       packages.x86_64-linux =
         let
-          pkgs = nixpkgs.legacyPackages.x86_64-linux;
+          pkgs = import nixpkgs { system = "x86_64-linux"; config.allowUnfree = true; };
         in
         {
-          cursor = pkgs.callPackage ./cursor/default.nix { };
-          helium = pkgs.callPackage ./helium/default.nix { };
-          antigravity = pkgs.callPackage ./antigravity/default.nix { };
-          bun-latest = pkgs.callPackage ./bun-latest/default.nix { inherit bun-source; };
+          cursor = pkgs.callPackage ./ides/cursor/default.nix { };
+          helium = pkgs.callPackage ./browsers/helium/default.nix { };
+          antigravity = pkgs.callPackage ./ides/antigravity/default.nix { };
+          bun-latest = pkgs.callPackage ./tooling/bun-latest/default.nix { inherit bun-source; };
           zed-staging = zed-staging-source.packages.x86_64-linux.default;
-          zen-browser = pkgs.callPackage ./zen-browser/default.nix { inherit zen-browser-source; };
+          zen-browser = pkgs.callPackage ./browsers/zen-browser/default.nix { inherit zen-browser-source; };
           default = self.packages.x86_64-linux.helium;
         };
 
       devShells.x86_64-linux.default =
         let
-          pkgs = nixpkgs.legacyPackages.x86_64-linux;
+          pkgs = import nixpkgs { system = "x86_64-linux"; config.allowUnfree = true; };
         in
         pkgs.mkShell {
           packages = with pkgs; [
