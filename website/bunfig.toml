@@ -8,7 +8,6 @@ smol = true
 
 [install]
 optional = false
-dev = false
 peer = false
 exact = true
 ignoreScripts = true
@@ -16,6 +15,4 @@ auto = "disable"
 prefer = "offline"
 linkWorkspacePackages = true
 minimumReleaseAge = 259200
-
-[install.security]
-scanner = "@socketsecurity/bun-security-scanner"
+minimumReleaseAgeExcludes = ["@types/bun", "typescript", "@socketsecurity/bun-security-scanner"]

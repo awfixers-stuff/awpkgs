@@ -1,5 +1,5 @@
 {
-  "name": "web",
+  "name": "marketing",
   "version": "0.0.1",
   "private": true,
   "type": "module",
@@ -8,19 +8,13 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "lint": "eslint",
+    "lint": "oxlint",
     "format": "prettier --write \"**/*.{ts,tsx,astro}\"",
     "typecheck": "astro check"
   },
   "dependencies": {
-    "@astrojs/react": "^5",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
     "@workspace/ui": "workspace:*",
     "astro": "^6",
-    "lucide-react": "^1.17.0",
-    "react": "^19.2.6",
-    "react-dom": "^19.2.6",
     "zod": "4.4.3"
   },
   "devDependencies": {
@@ -31,14 +25,10 @@
     "@tailwindcss/vite": "^4",
     "@types/node": "^25.0.0",
     "@typescript/native-preview": "7.0.0-dev.20260527.2",
-    "eslint": "^10",
-    "eslint-plugin-react-hooks": "^7.1.1",
-    "eslint-plugin-react-refresh": "^0.5.2",
     "globals": "^17",
     "oxfmt": "0.53.0",
     "oxlint": "1.68.0",
     "typescript": "~6",
-    "typescript-eslint": "^8",
     "vitest": "4.1.8"
   }
 }

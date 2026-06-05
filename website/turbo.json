@@ -9,7 +9,10 @@
     },
     "lint": { "dependsOn": ["^lint"] },
     "format": { "dependsOn": ["^format"] },
-    "typecheck": { "dependsOn": ["^typecheck"] },
+    "typecheck": {
+      "dependsOn": ["^typecheck"],
+      "description": "should run tsgo on all packages and apps"
+    },
     "dev": { "cache": false, "persistent": true }
   }
 }
