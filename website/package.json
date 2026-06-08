@@ -20,7 +20,7 @@
     "zod": "4.4.3"
   },
   "devDependencies": {
-    "@oxfmt/binding-linux-x64-gnu": "0.53.0",
+    "@oxfmt/binding-linux-x64-gnu": "0.54.0",
     "@oxlint/binding-linux-x64-gnu": "1.68.0",
     "@socketsecurity/bun-security-scanner": "1.1.2",
     "@typescript/native-preview": "7.0.0-dev.20260527.2",
