@@ -30,7 +30,7 @@
     "@oxlint/binding-linux-x64-gnu": "1.68.0",
     "@tailwindcss/vite": "^4",
     "@types/node": "^25.0.0",
-    "@typescript/native-preview": "7.0.0-dev.20260527.2",
+    "@typescript/native-preview": "7.0.0-dev.20260610.1",
     "eslint": "^10",
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.5.2",

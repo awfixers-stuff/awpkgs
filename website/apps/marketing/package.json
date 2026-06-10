@@ -24,7 +24,7 @@
     "@oxlint/binding-linux-x64-gnu": "1.68.0",
     "@tailwindcss/vite": "^4",
     "@types/node": "^25.0.0",
-    "@typescript/native-preview": "7.0.0-dev.20260527.2",
+    "@typescript/native-preview": "7.0.0-dev.20260610.1",
     "globals": "^17",
     "oxfmt": "0.53.0",
     "oxlint": "1.68.0",
