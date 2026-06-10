@@ -2,6 +2,10 @@
 
 `awpkgs` is a collection of custom Nix packages that are not included in the official `nixpkgs` repository. These packages are frequently iterated on and often track proprietary, beta, or alpha software that may not be suitable for upstream inclusion.
 
+## CI
+
+On push/PR to `main` or `master`, GitHub Actions runs [`ci/build-packages.sh`](ci/build-packages.sh) and builds every package in the flake. **The workflow fails only if a `nix build` fails.** Uploading workflow artifacts (and optional release assets on tags) uses `continue-on-error`, so upload problems do not fail an otherwise green build. See [`ci/README.md`](ci/README.md).
+
 ## License
 
 The **source code of this repository** (i.e., the Nix expressions, flakes, build scripts, and configuration files) is licensed under the **AWFixer Source Available License v0.4**. Please refer to the [`LICENSE.md`](LICENSE.md) file for the full terms and conditions.
