@@ -23,25 +23,42 @@
   };
 
   outputs =
-    { self, nixpkgs, bun-source, zed-staging-source, zen-browser-source, chaotic, nur }:
+    {
+      self,
+      nixpkgs,
+      bun-source,
+      zed-staging-source,
+      zen-browser-source,
+      chaotic,
+      nur,
+    }:
     {
       packages.x86_64-linux =
         let
-          pkgs = import nixpkgs { system = "x86_64-linux"; config.allowUnfree = true; };
+          pkgs = import nixpkgs {
+            system = "x86_64-linux";
+            config.allowUnfree = true;
+          };
         in
         {
-          cursor = pkgs.callPackage ./ides/cursor/default.nix { };
-          helium = pkgs.callPackage ./browsers/helium/default.nix { };
-          antigravity = pkgs.callPackage ./ides/antigravity/default.nix { };
-          bun-latest = pkgs.callPackage ./tooling/bun-latest/default.nix { inherit bun-source; };
+          cursor = pkgs.callPackage ./packages/ides/cursor/default.nix { };
+          helium = pkgs.callPackage ./packages/browsers/helium/default.nix { };
+          antigravity = pkgs.callPackage ./packages/ides/antigravity/default.nix { };
+          bun-latest = pkgs.callPackage ./packages/tooling/bun-latest/default.nix { inherit bun-source; };
+          readest = pkgs.callPackage ./packages/entertainment/readest/default.nix { };
           zed-staging = zed-staging-source.packages.x86_64-linux.default;
-          zen-browser = pkgs.callPackage ./browsers/zen-browser/default.nix { inherit zen-browser-source; };
+          zen-browser = pkgs.callPackage ./packages/browsers/zen-browser/default.nix {
+            inherit zen-browser-source;
+          };
           default = self.packages.x86_64-linux.helium;
         };
 
       devShells.x86_64-linux.default =
         let
-          pkgs = import nixpkgs { system = "x86_64-linux"; config.allowUnfree = true; };
+          pkgs = import nixpkgs {
+            system = "x86_64-linux";
+            config.allowUnfree = true;
+          };
         in
         pkgs.mkShell {
           packages = with pkgs; [
