@@ -1,0 +1,18 @@
+# Reduce memory usage at the cost of performance
+smol = true
+
+telemetry = false
+
+[test]
+smol = true
+
+[install]
+optional = false
+peer = false
+exact = true
+ignoreScripts = true
+auto = "disable"
+prefer = "offline"
+linkWorkspacePackages = true
+minimumReleaseAge = 259200
+minimumReleaseAgeExcludes = ["@types/bun", "typescript", "@socketsecurity/bun-security-scanner"]
