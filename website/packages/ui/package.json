@@ -41,7 +41,7 @@
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.5.2",
     "globals": "^17",
-    "oxfmt": "0.53.0",
+    "oxfmt": "0.54.0",
     "oxlint": "1.68.0",
     "tailwindcss": "^4",
     "typescript": "~6",
