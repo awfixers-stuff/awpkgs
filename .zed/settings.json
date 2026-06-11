@@ -1,0 +1,16 @@
+{
+  "load_direnv": "direct",
+  "context_servers": {
+    "exa": {
+      "url": "https://mcp.exa.ai/mcp",
+    },
+    "nixos": {
+      "command": "uvx",
+      "args": ["mcp-nixos"],
+    },
+    "railway": {
+      "command": "railway",
+      "args": ["mcp"],
+    },
+  },
+}
